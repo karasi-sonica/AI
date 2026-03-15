@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#202123] text-gray-100;
+  }
+}
+
+@layer utilities {
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scorllbar for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mermaid graph styling overrides for dark mode compatibility */
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+.mermaid-diagram .node rect,
+.mermaid-diagram .node circle,
+.mermaid-diagram .node ellipse,
+.mermaid-diagram .node polygon,
+.mermaid-diagram .node path {
+  fill: #2d3748 !important;
+  stroke: #4a5568 !important;
+  stroke-width: 1px !important;
+}
+.mermaid-diagram .node text {
+  fill: #e2e8f0 !important;
+}
+.mermaid-diagram .edgePath .path {
+  stroke: #718096 !important;
+  stroke-width: 1.5px !important;
+}
+.mermaid-diagram .edgeLabel {
+  background-color: #1a202c !important;
+  color: #cbd5e0 !important;
+}
+.mermaid-diagram .marker {
+  fill: #718096 !important;
+  stroke: #718096 !important;
+}
+
+/* Typography component overrides */
+.prose {
+  color: #d1d5db;
+}
+.prose strong {
+  color: #f3f4f6;
+}
+.prose a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+.prose a:hover {
+  text-decoration: underline;
+}
+.prose code {
+  color: #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.875em;
+}
+.prose pre blockquote {
+  border-left-color: #4b5563;
+  color: #9ca3af;
+}
